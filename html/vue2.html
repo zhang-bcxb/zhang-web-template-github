@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vue2 模板文件</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <h1>{{demo}}</h1>
+  </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.2.6/vue.min.js"></script>
+<script>
+  new Vue({
+    el: '#root',
+    data() {
+      return {
+        demo: "文字内容"
+      }
+    },
+    created() {
+      console.log('created')
+      this.handleHello()
+    },
+    mounted() {
+      console.log('mounted')
+    },
+    methods: {
+      handleHello() {
+        console.log("hello vue2")
+      },
+    }
+  })
+</script>
+
+</html>
