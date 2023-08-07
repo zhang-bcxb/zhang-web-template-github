@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue2模板文件</title>
+  <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+  <script src="js/vue.js"></script>
+  <script src="element-ui/lib/index.js"></script>
+  <style></style>
+</head>
+
+<body>
+  <div id="app">
+    <div>{{demo}}</div>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: "#app",
+    data() {
+      return {
+        demo: "文字内容"
+      }
+    },
+    created() {
+      this.handleHello()
+    },
+    methods: {
+      handleHello() {
+        console.log("hello vue2")
+      },
+    }
+  });
+</script>
+
+</html>

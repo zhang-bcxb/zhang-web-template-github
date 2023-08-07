@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学生列表</title>
+  <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+  <script src="js/vue.js"></script>
+  <script src="element-ui/lib/index.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .el-header {
+      background-color: #545c64;
+    }
+
+    .main {
+      display: flex;
+      /* 改成y轴*/
+      flex-direction: column;
+      /* 总高度为整个屏幕 */
+      height: 100vh;
+    }
+
+    .content {
+      /* 占满剩余空间 */
+      flex-grow: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="div">
+    <el-container class="main">
+      <!-- 头部 -->
+      <el-header class="el-header">
+        <h1>头部</h1>
+      </el-header>
+
+      <!-- 侧边 + 主区域 -->
+      <el-container class="content" style="border: 1px solid #eee">
+        <!-- 侧边栏区域 -->
+        <el-aside width="210px" style="background-color: rgb(238, 241, 246)">
+          <h1>侧边栏区域</h1>
+        </el-aside>
+
+        <!-- 主区域 -->
+        <el-container>
+          <el-main>
+            <h1>{{text}}</h1>
+          </el-main>
+        </el-container>
+      </el-container>
+    </el-container>
+  </div>
+</body>
+<script>
+  new Vue({
+    el: "#div",
+    data() {
+      return {
+        text: "文字内容"
+      }
+    }
+  });
+</script>
+
+</html>
