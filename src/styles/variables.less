@@ -1,0 +1,46 @@
+// 全局变量
+
+// 头部状态栏高度
+@g-header-height: 70px;
+// 头部背景色
+@g-header-background-color: #00bdc2;
+
+// 主区域背景色
+@g-main-background-color: #f5f7f9;
+
+// 侧边栏宽度
+@g-sidebar-wide-width: 200px;
+@g-sidebar-narrow-width: 65px;
+@g-sidebar-width: var(--real-sidebar-width);
+// 背景色
+@g-sidebar-background-color: #fff;
+// 字体颜色
+@g-sidebar-text-color: #00bdc2;
+// iconfont颜色
+@g-sidebar-icon-color: #00bdc2;
+// 子菜单颜色
+@g-sidebar-item-background-color: dark(@g-sidebar-background-color, 7);
+
+// 激活背景色
+@g-sidebar-active-background-color: #00bdc2;
+// 激活字体颜色
+@g-sidebar-active-text-color: #fff;
+// 激活图标iconfont颜色颜色
+@g-sidebar-active-icon-color: #fff;
+
+// 鼠标移上去背景色
+@g-sidebar-hover-background-color: #00bdc2;
+// 鼠标移上去字体颜色
+@g-sidebar-hover-text-color: #fff;
+// 鼠标移上去iconfont颜色
+@g-sidebar-hover-icon-color: #fff;
+
+// 面包屑高度
+@g-breadcrumb-height: 50px;
+:export {
+  g_sidebar_background_color: @g-sidebar-background-color;
+  g_sidebar_text_color: @g-sidebar-text-color;
+  g_sidebar_wide_width: @g-sidebar-wide-width;
+  g_sidebar_narrow_width: @g-sidebar-narrow-width;
+  g_sidebar_active_text_color: @g-sidebar-active-text-color;
+}

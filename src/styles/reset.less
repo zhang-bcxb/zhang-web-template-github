@@ -1,0 +1,22 @@
+// 重置css
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: #333;
+  // background-color: $g-app-bg;
+  box-sizing: border-box;
+  font-family: Lato, PingFang SC, Microsoft YaHei, sans-serif;
+  &.hidden {
+    overflow: hidden;
+  }
+}
+* {
+  box-sizing: inherit;
+}
+// router-link 移除下划线
+a:-webkit-any-link {
+  text-decoration: none;
+}

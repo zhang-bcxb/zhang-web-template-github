@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <meta name="keywords" content="数字医信" />
+    <meta name="description" content="数字医信模版" />
+    <!-- 添加alicon -->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2159249_tzfxfnb0dwh.css"></link>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      .vaa-home {
+        position: absolute;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        user-select: none;
+        color: #736477;
+        background-color: snow;
+      }
+      .vaa-home .loading {
+        position: relative;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        color: inherit;
+        vertical-align: middle;
+        pointer-events: none;
+        transform: scale(3);
+      }
+      .vaa-home .loading::before,
+      .vaa-home .loading::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: currentColor;
+        left: 50%;
+        right: 0;
+        top: 0;
+        bottom: 50%;
+        box-shadow: -0.5em 0 0 currentColor;
+        animation: loading 1s linear infinite;
+      }
+      .vaa-home .loading::after {
+        top: 50%;
+        bottom: 0;
+        animation-delay: 0.25s;
+      }
+      @keyframes loading {
+        0%,
+        100% {
+          box-shadow: -0.5em 0 0 transparent;
+          background-color: currentColor;
+        }
+        50% {
+          box-shadow: -0.5em 0 0 currentColor;
+          background-color: transparent;
+        }
+      }
+      .vaa-home .text {
+        font-size: 24px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app">
+      <div class="vaa-home">
+        <div class="loading"></div>
+        <div class="text"><%= htmlWebpackPlugin.options.title %>载入中…</div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
